@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://k00rjsddkjhb"]
+
+[ext_resource type="Script" uid="uid://bft36pwgpf1bh" path="res://scenes/title.gd" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://du8lwb7axh5hh" path="res://graphics/start-background.png" id="2_wosw1"]
+[ext_resource type="AudioStream" uid="uid://bchu5efho5fqk" path="res://sounds/start.mp3" id="3_p6dhs"]
+[ext_resource type="FontFile" uid="uid://i1eetfry6s4h" path="res://fonts/Righteous-Regular.ttf" id="3_pyl7j"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ignj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1270.8, 737.713)
+scale = Vector2(2.34667, 0.785716)
+texture = ExtResource("2_wosw1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.618126, 0.805655, 0.324128, 1)
+theme_override_colors/font_shadow_color = Color(0.102092, 0.23614, 0.212097, 1)
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 100
+text = "Space Shooter"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.619608, 0.803922, 0.32549, 1)
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 100
+text = "Adventure"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 100
+
+[node name="StartText" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.309323, 0.506358, 0.301074, 1)
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 50
+text = "Press space to start"
+
+[node name="TitleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_p6dhs")
+
+[connection signal="finished" from="TitleSound" to="." method="_on_title_sound_finished"]
