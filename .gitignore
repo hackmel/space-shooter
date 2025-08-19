@@ -1,0 +1,14 @@
+# Godot-specific
+.import/
+export.cfg
+export_presets.cfg
+.godot/
+export_files/
+
+# Mono (C#) specific (only if you use C# in Godot)
+.mono/
+data_*/
+
+# macOS / Windows junk
+.DS_Store
+Thumbs.db
