@@ -21,4 +21,4 @@ func set_health(health):
 		
 
 func _on_score(score):
-	$MarginContainer/Score.text = str(score)
+	$MarginContainer/Score.text = "Score: " + str(score)

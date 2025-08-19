@@ -9,24 +9,24 @@
 [ext_resource type="AudioStream" uid="uid://btemdfnoi3vpl" path="res://sounds/sound-loop.mp3" id="7_klq6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r41h"]
-size = Vector2(2458.5, 145)
+size = Vector2(1891.31, 145)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
-size = Vector2(350, 1685)
+size = Vector2(350, 1055.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppgk2"]
-size = Vector2(2475, 176)
+size = Vector2(1591, 176)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mx8sn")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1412.83, 771.72)
-scale = Vector2(0.944781, 0.643424)
+position = Vector2(613.829, 386.5)
+scale = Vector2(0.412114, 0.3388)
 texture = ExtResource("1_w7c3h")
 
 [node name="Player" parent="." instance=ExtResource("1_2q6dc")]
-position = Vector2(1303, 1013)
+position = Vector2(610, 649)
 
 [node name="Border" type="Node2D" parent="."]
 position = Vector2(625, 484)
@@ -36,7 +36,7 @@ position = Vector2(2, 21)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bottom"]
-position = Vector2(627, 1061)
+position = Vector2(-19, 353)
 shape = SubResource("RectangleShape2D_2r41h")
 
 [node name="Right" type="StaticBody2D" parent="Border"]
@@ -44,7 +44,7 @@ position = Vector2(2061, 95)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Right"]
-position = Vector2(-26, 168.5)
+position = Vector2(-1303, -204)
 shape = SubResource("RectangleShape2D_mx8sn")
 
 [node name="Left" type="StaticBody2D" parent="Border"]
@@ -52,7 +52,7 @@ position = Vector2(-751, 122)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Left"]
-position = Vector2(-26, 168.5)
+position = Vector2(-44, -254)
 shape = SubResource("RectangleShape2D_mx8sn")
 
 [node name="Top" type="StaticBody2D" parent="Border"]
@@ -60,7 +60,7 @@ position = Vector2(2, 21)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Top"]
-position = Vector2(632.5, -579)
+position = Vector2(157, -598)
 shape = SubResource("RectangleShape2D_ppgk2")
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
